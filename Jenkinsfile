@@ -5,12 +5,13 @@ pipeline {
     
         stage('Build') {
             steps {
-                echo 'build'
+                git url: 'https://github.com/Boumenjel/devops.git'
+                sh "mvn clean verify"
             }
         }
         stage('Test') {
             steps {
-                echo 'test'
+                sh "mvn test"
             }
           }
       }
