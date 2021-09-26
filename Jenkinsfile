@@ -6,12 +6,12 @@ pipeline {
         stage('Build') {
             steps {
                 git url: 'https://github.com/Boumenjel/devops.git'
-                sh "mvn clean verify"
+                bat "./mvnw clean install"
             }
         }
         stage('Test') {
             steps {
-                sh "mvn test"
+                bat "./mvnw test"
             }
           }
       }
