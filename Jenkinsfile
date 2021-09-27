@@ -24,11 +24,6 @@ pipeline {
                 // 
             }
         }
-         stage('Build Image Docker') {
-                      steps {
-                          bat "docker build -t  spring-boot-docker.war ."
-                      }
-                  }
       }
       post {
         always {
