@@ -21,7 +21,7 @@ pipeline {
           }
          stage('Build Image Docker') {
                       steps {
-                          bat "docker build -t C:\Users\Wael Boumenjel\Desktop\devops\demo\spring-boot-docker ."
+                          sh "docker build -t C:\Users\Wael Boumenjel\Desktop\devops\demo\spring-boot-docker ."
                       }
                   }
       }
